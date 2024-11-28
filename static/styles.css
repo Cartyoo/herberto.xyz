@@ -42,7 +42,7 @@ a:hover {
 }
 
 .button:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .button2 {
@@ -54,7 +54,7 @@ a:hover {
 
 .button2:hover {
     color: #89b4fa;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .button2 {
@@ -71,9 +71,9 @@ a:hover {
 
 .header-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column; /* Stacks the children vertically */
+    align-items: center; /* Centers the children horizontally */
+    gap: 5px; /* Adjusted for vertical spacing */
 }
 
 h1 {
@@ -82,5 +82,6 @@ h1 {
 
 h6 {
     margin: 0;
-    font-size: 0.6rem;
+    font-size: 15px;
+    text-align: center; /* Optional: To center-align within the container */
 }
