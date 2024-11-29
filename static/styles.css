@@ -19,8 +19,11 @@ body {
     max-width: 90%; 
     width: 100%; 
     max-width: 600px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    font-size: 13.5px;
 }
+
+
 
 a {
     color: #b4befe;
