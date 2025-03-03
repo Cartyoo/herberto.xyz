@@ -1,4 +1,3 @@
-console.log('hi visitor :3')
 document.addEventListener('DOMContentLoaded', function() {
     const tags = document.querySelectorAll('.tag');
     tags.forEach((tag, index) => {
