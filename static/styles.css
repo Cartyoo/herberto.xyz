@@ -61,7 +61,7 @@ body {
 
 .banner {
     height: 175px;
-    background-image: url('/static/banner.png');
+    background-image: url('/static/banner.webp');
     background-size: cover;
     background-position: center;
     width: 100%;
