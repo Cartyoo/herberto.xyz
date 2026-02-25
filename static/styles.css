@@ -59,23 +59,33 @@ body {
     animation: fadeIn 0.8s ease-out;
 }
 
+.banner {
+    height: 175px;
+    background-image: url('/static/banner.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
 .profile {
     display: flex;
-    align-items: center;
-    padding: 30px 30px 15px;
+    align-items: flex-end;
+    padding: 0 30px 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .profile-picture {
     margin-right: 20px;
+    margin-top: -50px;
     position: relative;
 }
 
 .profile-picture img {
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 3px solid var(--accent-primary);
+    border: 6px solid var(--card-bg);
+    background-color: var(--card-bg);
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -83,6 +93,10 @@ body {
 .profile-picture img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(203, 166, 247, 0.4);
+}
+
+.profile-header {
+    padding-bottom: 5px;
 }
 
 .profile-header h1 {
@@ -282,13 +296,16 @@ h2::after {
 @media (max-width: 480px) {
     .profile {
         flex-direction: column;
-        text-align: center;
-        padding: 25px 20px 15px;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0 20px 15px;
     }
     
     .profile-picture {
+        align-self: flex-start;
         margin-right: 0;
         margin-bottom: 15px;
+        margin-top: -50px;
     }
     
     .content {
