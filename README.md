@@ -1,6 +1,5 @@
-# auri.lol
+# [herberto.xyz](https://herberto.xyz)
 
-my portfolio website thing 
+this isn't updated on git too often
 
-![image](https://github.com/user-attachments/assets/17551b0b-ef19-4ec2-95ac-957216168732)
- 
+credits to https://github.com/imlayered for making this originally
