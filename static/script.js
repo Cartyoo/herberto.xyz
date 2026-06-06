@@ -10,18 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             tag.style.transform = 'translateY(0)';
         }, 100 + (index * 50));
     });
-    
 
-    
-    const backgroundGlow = document.querySelector('.background-glow');
-    document.addEventListener('mousemove', (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
-        
-        backgroundGlow.style.top = `${y - 250}px`;
-        backgroundGlow.style.left = `${x - 250}px`;
-    });
-    
     const akaNames = document.querySelectorAll('.aka-name');
     akaNames.forEach(name => {
         name.addEventListener('mouseover', () => {

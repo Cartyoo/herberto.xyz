@@ -42,7 +42,7 @@ app.get('/api/lastfm/top-artist', async (req, res) => {
     }
 
     const url = `${LASTFM_BASE}/?method=user.gettopartists&user=${encodeURIComponent(LASTFM_USERNAME)}&api_key=${LASTFM_API_KEY}&period=${period}&limit=1&format=json`;
-
+    
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`Last.fm responded with ${response.status}`);
