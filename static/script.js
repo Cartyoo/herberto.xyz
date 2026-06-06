@@ -59,4 +59,32 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 600);
         });
     });
+
+    const hakatimeUrl = 'https://hackatime.hackclub.com/api/v1/users/herberto/stats';
+    const timeEl = document.getElementById('haka-time');
+    const langEl = document.getElementById('haka-lang');
+    
+    if (timeEl && langEl) {
+        fetch(hakatimeUrl)
+            .then(res => {
+                if (!res.ok) throw new Error('API fetch failed');
+                return res.json();
+            })
+            .then(data => {
+                const stats = data.data || data;
+                timeEl.textContent = stats.human_readable_total || '0 hrs';
+
+                if (stats.languages && stats.languages.length > 0) {
+                    const topLang = stats.languages.find(l => l.name !== "Other") || stats.languages[0];
+                    langEl.textContent = topLang.name;
+                } else {
+                    langEl.textContent = 'None';
+                }
+            })
+            .catch(err => {
+                console.error('Error fetching Hackatime stats:', err);
+                timeEl.textContent = 'Unavailable';
+                langEl.textContent = 'Unavailable';
+            });
+    }
 });
