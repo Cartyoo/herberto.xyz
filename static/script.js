@@ -11,24 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100 + (index * 50));
     });
     
-    const profilePic = document.querySelector('.profile-picture img');
-    let floatDirection = 1;
-    let floatPosition = 0;
-    
-    function floatAnimation() {
-        floatPosition += 0.05 * floatDirection;
-        
-        if (floatPosition > 3) {
-            floatDirection = -1;
-        } else if (floatPosition < 0) {
-            floatDirection = 1;
-        }
-        
-        profilePic.style.transform = `translateY(${floatPosition}px)`;
-        requestAnimationFrame(floatAnimation);
-    }
-    
-    floatAnimation();
+
     
     const backgroundGlow = document.querySelector('.background-glow');
     document.addEventListener('mousemove', (e) => {
