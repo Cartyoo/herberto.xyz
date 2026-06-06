@@ -87,4 +87,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 langEl.textContent = 'Unavailable';
             });
     }
+
+    const LASTFM_API = 'https://api.foxes.cool';
+    const artistNameEl = document.getElementById('lastfm-artist-name');
+    const artistScrobblesEl = document.getElementById('lastfm-artist-scrobbles');
+    const artistImgEl = document.getElementById('lastfm-artist-img');
+    const artistPlaceholderEl = document.getElementById('lastfm-artist-placeholder');
+
+    if (artistNameEl) {
+        fetch(`${LASTFM_API}/api/lastfm/top-artist?period=7day`)
+            .then(res => {
+                if (!res.ok) throw new Error('API fetch failed');
+                return res.json();
+            })
+            .then(data => {
+                if (!data.artist) {
+                    artistNameEl.textContent = 'No data';
+                    return;
+                }
+                const { name, scrobbles, image } = data.artist;
+                artistNameEl.textContent = name;
+                artistScrobblesEl.textContent = `${scrobbles.toLocaleString()} scrobbles this week`;
+
+                if (image) {
+                    artistImgEl.src = image;
+                    artistImgEl.alt = name;
+                    artistImgEl.classList.remove('hidden');
+                    artistPlaceholderEl.style.display = 'none';
+                }
+            })
+            .catch(err => {
+                console.error('Error fetching Last.fm data:', err);
+                artistNameEl.textContent = 'Unavailable';
+            });
+    }
 });
