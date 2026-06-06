@@ -1,17 +1,17 @@
 :root {
-    --bg-color: #13111e;
-    --card-bg: #1e1e2e;
-    --text-primary: #cdd6f4;
-    --text-secondary: #a6adc8;
-    --accent-primary: #cba6f7;
-    --accent-secondary: #b4befe;
-    --accent-tertiary: #f5c2e7;
-    --project-tag-bg: rgba(203, 166, 247, 0.1);
-    --project-tag-hover: rgba(203, 166, 247, 0.25);
-    --skill-tag-bg: rgba(245, 194, 231, 0.1);
-    --btn-bg: rgba(203, 166, 247, 0.15);
-    --btn-hover: rgba(203, 166, 247, 0.3);
-    --card-border: rgba(203, 166, 247, 0.2);
+    --bg-color: #1a1008;
+    --card-bg: #231608;
+    --text-primary: #f5e6d8;
+    --text-secondary: #c8a98a;
+    --accent-primary: #ce5002;
+    --accent-secondary: #e8681a;
+    --accent-tertiary: #f0903a;
+    --project-tag-bg: rgba(206, 80, 2, 0.1);
+    --project-tag-hover: rgba(206, 80, 2, 0.25);
+    --skill-tag-bg: rgba(240, 144, 58, 0.1);
+    --btn-bg: rgba(206, 80, 2, 0.15);
+    --btn-hover: rgba(206, 80, 2, 0.3);
+    --card-border: rgba(206, 80, 2, 0.2);
     --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
@@ -38,7 +38,7 @@ body {
     position: fixed;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(203, 166, 247, 0.1) 0%, rgba(203, 166, 247, 0) 70%);
+    background: radial-gradient(circle, rgba(206, 80, 2, 0.1) 0%, rgba(206, 80, 2, 0) 70%);
     top: -250px;
     right: -250px;
     border-radius: 50%;
@@ -92,7 +92,7 @@ body {
 
 .profile-picture img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(203, 166, 247, 0.4);
+    box-shadow: 0 0 20px rgba(206, 80, 2, 0.4);
 }
 
 .profile-header {
@@ -190,7 +190,7 @@ h2::after {
 .tag.project {
     background-color: var(--project-tag-bg);
     color: var(--accent-primary);
-    border: 1px solid rgba(203, 166, 247, 0.2);
+    border: 1px solid rgba(206, 80, 2, 0.2);
     position: relative;
     overflow: hidden;
 }
@@ -222,11 +222,11 @@ h2::after {
 .tag.skill {
     background-color: var(--skill-tag-bg);
     color: var(--accent-tertiary);
-    border: 1px solid rgba(245, 194, 231, 0.2);
+    border: 1px solid rgba(240, 144, 58, 0.2);
 }
 
 .tag.skill:hover {
-    background-color: rgba(245, 194, 231, 0.2);
+    background-color: rgba(240, 144, 58, 0.2);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -288,7 +288,7 @@ h2::after {
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 1px solid rgba(203, 166, 247, 0.2);
+    border: 1px solid rgba(206, 80, 2, 0.2);
     flex: 1;
     text-align: center;
     font-weight: 500;
@@ -331,9 +331,9 @@ h2::after {
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(203, 166, 247, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(203, 166, 247, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(203, 166, 247, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(206, 80, 2, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(206, 80, 2, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(206, 80, 2, 0); }
 }
 
 @media (max-width: 480px) {
