@@ -4,7 +4,7 @@ services:
     container_name: foxescool-api
     restart: unless-stopped
     ports:
-      - "3001:3001"
+      - "5060:3001"
     env_file:
       - .env
     environment:
