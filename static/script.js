@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 const { name, scrobbles, image } = data.artist;
                 artistNameEl.textContent = name;
-                artistScrobblesEl.textContent = `${scrobbles.toLocaleString()} scrobbles this week`;
+                artistScrobblesEl.textContent = `${scrobbles.toLocaleString()} plays this week`;
 
                 if (image) {
                     artistImgEl.src = image;
@@ -108,6 +108,74 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(err => {
                 console.error('Error fetching Last.fm data:', err);
                 artistNameEl.textContent = 'Unavailable';
+            });
+    }
+
+    const trackNameEl = document.getElementById('lastfm-track-name');
+    const trackArtistEl = document.getElementById('lastfm-track-artist');
+    const trackPlaysEl = document.getElementById('lastfm-track-plays');
+    const trackImgEl = document.getElementById('lastfm-track-img');
+    const trackPlaceholderEl = document.getElementById('lastfm-track-placeholder');
+
+    if (trackNameEl) {
+        fetch(`${LASTFM_API}/api/lastfm/top-track?period=7day`)
+            .then(res => {
+                if (!res.ok) throw new Error('API fetch failed');
+                return res.json();
+            })
+            .then(data => {
+                if (!data.track) {
+                    trackNameEl.textContent = 'No data';
+                    return;
+                }
+                const { name, artist, plays, image } = data.track;
+                trackNameEl.textContent = name;
+                if (artist) trackArtistEl.textContent = artist;
+                trackPlaysEl.textContent = `${plays.toLocaleString()} plays this week`;
+                if (image) {
+                    trackImgEl.src = image;
+                    trackImgEl.alt = name;
+                    trackImgEl.classList.remove('hidden');
+                    trackPlaceholderEl.style.display = 'none';
+                }
+            })
+            .catch(err => {
+                console.error('Error fetching Last.fm track data:', err);
+                trackNameEl.textContent = 'Unavailable';
+            });
+    }
+
+    const albumNameEl = document.getElementById('lastfm-album-name');
+    const albumArtistEl = document.getElementById('lastfm-album-artist');
+    const albumPlaysEl = document.getElementById('lastfm-album-plays');
+    const albumImgEl = document.getElementById('lastfm-album-img');
+    const albumPlaceholderEl = document.getElementById('lastfm-album-placeholder');
+
+    if (albumNameEl) {
+        fetch(`${LASTFM_API}/api/lastfm/top-album?period=7day`)
+            .then(res => {
+                if (!res.ok) throw new Error('API fetch failed');
+                return res.json();
+            })
+            .then(data => {
+                if (!data.album) {
+                    albumNameEl.textContent = 'No data';
+                    return;
+                }
+                const { name, artist, plays, image } = data.album;
+                albumNameEl.textContent = name;
+                if (artist) albumArtistEl.textContent = artist;
+                albumPlaysEl.textContent = `${plays.toLocaleString()} plays this week`;
+                if (image) {
+                    albumImgEl.src = image;
+                    albumImgEl.alt = name;
+                    albumImgEl.classList.remove('hidden');
+                    albumPlaceholderEl.style.display = 'none';
+                }
+            })
+            .catch(err => {
+                console.error('Error fetching Last.fm album data:', err);
+                albumNameEl.textContent = 'Unavailable';
             });
     }
 });

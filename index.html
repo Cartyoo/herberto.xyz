@@ -87,15 +87,48 @@
             </div>
 
             <div class="section">
-                <h2>Top Artist (Past 7 Days)</h2>
-                <div class="lastfm-artist" id="lastfm-artist">
-                    <div class="lastfm-artist-img-wrap">
-                        <img id="lastfm-artist-img" src="" alt="" class="lastfm-artist-img hidden">
-                        <div class="lastfm-artist-img-placeholder" id="lastfm-artist-placeholder">♫</div>
+                <h2>Music Stats (Past 7 Days)</h2>
+                <div class="lastfm-grid">
+                    <div class="lastfm-item">
+                        <span class="lastfm-item-label">Top Artist</span>
+                        <div class="lastfm-artist" id="lastfm-artist">
+                            <div class="lastfm-artist-img-wrap">
+                                <img id="lastfm-artist-img" src="" alt="" class="lastfm-artist-img hidden">
+                                <div class="lastfm-artist-img-placeholder" id="lastfm-artist-placeholder">♫</div>
+                            </div>
+                            <div class="lastfm-artist-info">
+                                <span class="lastfm-artist-name" id="lastfm-artist-name">Loading...</span>
+                                <span class="lastfm-artist-scrobbles" id="lastfm-artist-scrobbles"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="lastfm-artist-info">
-                        <span class="lastfm-artist-name" id="lastfm-artist-name">Loading...</span>
-                        <span class="lastfm-artist-scrobbles" id="lastfm-artist-scrobbles"></span>
+                    <div class="lastfm-item">
+                        <span class="lastfm-item-label">Top Track</span>
+                        <div class="lastfm-artist" id="lastfm-track">
+                            <div class="lastfm-artist-img-wrap">
+                                <img id="lastfm-track-img" src="" alt="" class="lastfm-artist-img hidden">
+                                <div class="lastfm-artist-img-placeholder" id="lastfm-track-placeholder">♪</div>
+                            </div>
+                            <div class="lastfm-artist-info">
+                                <span class="lastfm-artist-name" id="lastfm-track-name">Loading...</span>
+                                <span class="lastfm-artist-scrobbles lastfm-track-artist" id="lastfm-track-artist"></span>
+                                <span class="lastfm-artist-scrobbles" id="lastfm-track-plays"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lastfm-item">
+                        <span class="lastfm-item-label">Top Album</span>
+                        <div class="lastfm-artist" id="lastfm-album">
+                            <div class="lastfm-artist-img-wrap">
+                                <img id="lastfm-album-img" src="" alt="" class="lastfm-artist-img hidden">
+                                <div class="lastfm-artist-img-placeholder" id="lastfm-album-placeholder">◉</div>
+                            </div>
+                            <div class="lastfm-artist-info">
+                                <span class="lastfm-artist-name" id="lastfm-album-name">Loading...</span>
+                                <span class="lastfm-artist-scrobbles lastfm-track-artist" id="lastfm-album-artist"></span>
+                                <span class="lastfm-artist-scrobbles" id="lastfm-album-plays"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

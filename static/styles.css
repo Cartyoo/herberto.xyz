@@ -346,6 +346,33 @@ h2 {
     color: var(--accent-light);
 }
 
+.lastfm-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.lastfm-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lastfm-item-label {
+    font-size: 0.73rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-secondary);
+}
+
+.lastfm-track-artist {
+    font-size: 0.82rem;
+    color: var(--accent-light);
+    opacity: 0.75;
+}
+
 .lastfm-artist {
     display: flex;
     align-items: center;
