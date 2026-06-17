@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>furry bot | terms of service</title>
+    <meta name="description" content="terms of service for furry bot">
+    <meta name="author" content="herberto">
+
+    <meta property="og:title" content="furry bot | terms of service">
+    <meta property="og:description" content="terms of service for furry bot">
+    <meta property="og:image" content="https://cdn.herberto.xyz/pfp.png">
+    <meta property="og:url" content="https://foxes.cool/bot/tos.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="https://cdn.herberto.xyz/pfp.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            align-items: flex-start;
+            padding: 40px 20px;
+        }
+
+        .card {
+            max-width: 680px;
+        }
+
+        .doc-header {
+            padding: 28px 28px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .doc-header h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(130deg, var(--accent-2) 0%, var(--accent-3) 45%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 6px;
+        }
+
+        .doc-header .meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.04em;
+        }
+
+        .doc-body {
+            padding: 24px 28px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .doc-section h2 {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .doc-section p {
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: rgba(240, 224, 204, 0.85);
+        }
+
+        .doc-section p + p {
+            margin-top: 10px;
+        }
+
+        .doc-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .doc-section ul li {
+            font-size: 0.93rem;
+            line-height: 1.65;
+            color: rgba(240, 224, 204, 0.82);
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .doc-section ul li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--accent-3);
+            font-weight: 700;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .warn-box {
+            background: rgba(206, 80, 2, 0.08);
+            border: 1px solid rgba(206, 80, 2, 0.25);
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: rgba(240, 224, 204, 0.82);
+        }
+
+        a.highlight {
+            color: var(--accent-3);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a.highlight:hover {
+            color: var(--accent-light);
+        }
+
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.88em;
+            background: rgba(206, 80, 2, 0.1);
+            border: 1px solid rgba(206, 80, 2, 0.2);
+            border-radius: 5px;
+            padding: 1px 6px;
+            color: var(--accent-light);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="doc-header">
+            <h1>furry bot - terms of service</h1>
+            <span class="meta">last updated: june 2026</span>
+        </div>
+
+        <div class="doc-body">
+
+            <div class="doc-section">
+                <h2>overview</h2>
+                <p>by using furry bot ("the bot") you agree to these terms. if you do not agree, you are not allowed to use the bot. these terms exist alongside Discord's own <a class="highlight" href="https://discord.com/terms">Terms of Service</a> - both apply.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="doc-section">
+                <h2>acceptable use</h2>
+                <p>furry bot provides utility commands including network and web tools such as <code>/ip</code>, <code>/ping</code>, <code>/ssl</code>, and others. you may use these commands for:</p>
+                <ul>
+                    <li>looking up publicly available information about IPs, domains, or websites</li>
+                    <li>personal curiosity, learning, or research</li>
+                    <li>legitimate server administration or networking tasks</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="doc-section">
+                <h2>prohibited use</h2>
+                <div class="warn-box">you must not use any bot command for malicious, harmful, or illegal purposes.</div>
+                <br>
+                <p>prohibited activities include but are not limited to:</p>
+                <ul>
+                    <li>using <code>/ip</code> or similar commands to gather information about a person without their consent (doxxing)</li>
+                    <li>using lookup tools to facilitate harassment, stalking, or threats</li>
+                    <li>using the bot to probe, scan, or interact with systems you do not own or have explicit permission to access</li>
+                    <li>using <code>/ssl</code>, <code>/ping</code>, or any other command to interact with illegal or inappropriate websites (e.g. sites hosting illegal content, malware, or CSAM)</li>
+                    <li>attempting to abuse or overload the bot or its underlying infrastructure</li>
+                    <li>using the bot in any way that violates applicable local, national, or international law</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="doc-section">
+                <h2>enforcement</h2>
+                <p>users found violating these terms may be blocked from using the bot at any time, without notice. serious violations may be reported to Discord or relevant authorities.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="doc-section">
+                <h2>disclaimer</h2>
+                <p>furry bot is provided "as is" without warranty of any kind. we are not responsible for how you choose to use the information returned by bot commands. the bot's tools display publicly available data - you are solely responsible for what you do with that data.</p>
+                <p>we reserve the right to modify or discontinue the bot or any of its features at any time.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="doc-section">
+                <h2>changes to these terms</h2>
+                <p>these terms may be updated at any time. continued use of the bot after changes are posted constitutes acceptance of the revised terms.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="doc-section">
+                <h2>contact</h2>
+                <p>questions or concerns? reach out <a class="highlight" href="/socials">here</a>.</p>
+            </div>
+
+            <nav class="navigation">
+                <a href="/" class="nav-button">Home</a>
+                <a href="/bot/privacy-policy.html" class="nav-button">Privacy Policy</a>
+            </nav>
+
+        </div>
+    </div>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+</body>
+
+</html>
