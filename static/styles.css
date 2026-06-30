@@ -152,26 +152,6 @@ body {
     flex-shrink: 0;
 }
 
-.profile-picture::before {
-    content: '';
-    position: absolute;
-    inset: -3px;
-    border-radius: 50%;
-    background: conic-gradient(
-        from 0deg,
-        #E28C05,
-        #EAD72B,
-        #FFFFFF,
-        #54B4CE,
-        #1F456E,
-        #54B4CE,
-        #FFFFFF,
-        #EAD72B,
-        #E28C05
-    );
-    z-index: 0;
-}
-
 .profile-picture img {
     width: 100px;
     height: 100px;
